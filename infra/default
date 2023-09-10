@@ -20,11 +20,11 @@ server {
     }
 
 
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/nikgir.ddns.net/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/nikgir.ddns.net/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/nikgir.ddns.net/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/nikgir.ddns.net/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
 
 }
@@ -33,13 +33,13 @@ server {
 server {
     if ($host = nikgir.ddns.net) {
         return 301 https://$host$request_uri;
-    } # managed by Certbot
+    }
 
 
 
     listen 80;
     server_name 84.252.139.135 nikgir.ddns.net;
-    return 404; # managed by Certbot
+    return 404;
 
 
 }
@@ -80,11 +80,11 @@ server {
 
 
 
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/nikkittygram.ddns.net/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/nikkittygram.ddns.net/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/nikkittygram.ddns.net/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/nikkittygram.ddns.net/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
 }
 
@@ -93,13 +93,13 @@ server {
 server {
     if ($host = nikkittygram.ddns.net) {
         return 301 https://$host$request_uri;
-    } # managed by Certbot
+    }
 
 
 
     server_name 84.252.139.135 nikkittygram.ddns.net;
     listen 80;
-    return 404; # managed by Certbot
+    return 404;
 
 
 }

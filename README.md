@@ -34,9 +34,7 @@ python manage.py migrate
 
 python manage.py createsuperuser
 
-6. В файле infra_sprint1/backend/kittygram_backend/settings.py в переменную ALLOWED_HOSTS добавить локальные адреса, а также доменное имя или внешний IP (если есть)
-
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'localhost', 'xxx.xxx.xxx.xxx']
+6. В файле .env прописать ваш SECRET_KEY, ALLOWED_HOSTS по примеру в .env.example
 
 7. В этом же файле поменять значение переменной DEBUG с True на False
 
